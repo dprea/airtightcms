@@ -8,7 +8,7 @@
 
   function pageTitle($rootScope, $interpolate, $state) {
     var directive = {
-      retrict: 'A',
+      restrict: 'A',
       link: link
     };
 
@@ -18,7 +18,7 @@
       $rootScope.$on('$stateChangeSuccess', listener);
 
       function listener(event, toState) {
-        var applicationCoreTitle = 'MEAN.js',
+        var applicationCoreTitle = 'Airtight CMS',
           separeteBy = ' - ';
         if (toState.data && toState.data.pageTitle) {
           var stateTitle = $interpolate(toState.data.pageTitle)($state.$current.locals.globals);
@@ -29,4 +29,4 @@
       }
     }
   }
-})();
+}());
